@@ -16,8 +16,9 @@ function SignIn(props) {
             const data = await res.json();
             const userSign = data.user
             setUserAuth(userSign)
-            success(userSign.firstName);
+            successSign(userSign.firstName);
         } catch (error) {
+            errorSign();
             console.error('Error fetching user data:', error);
         }
     }
@@ -31,7 +32,7 @@ function SignIn(props) {
         // Replace with actual login logic
     };
 
-    const success = (f_name) => {
+    const successSign = (f_name) => {
         messageApi.open({
             type: 'success',
             content: 'Hi ' + f_name + ' your welcome!!',
@@ -40,6 +41,14 @@ function SignIn(props) {
         setTimeout(() => setSignMode('Home'), 1000);  // Adjusted the timeout to 1 second for demonstration
     };
 
+    const errorSign = (f_name) => {
+        messageApi.open({
+            type: 'error',
+            content: 'Please check email or phone and pasword!!',
+            duration: 3,
+        });
+        // setTimeout(() => setSignMode('Home'), 1000);  // Adjusted the timeout to 1 second for demonstration
+    };
 
     return (
         <Form
