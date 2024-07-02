@@ -1,0 +1,79 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.card-box {
+    justify-content: right !important;
+    text-align: left;
+    width: 800px;
+    /* Set width to auto to adjust based on content */
+    max-width: 80%;
+    /* Optionally, set a maximum width to limit expansion */
+    padding: 30px;
+    background-color: #181818;
+    opacity: 0.9;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+
+.card-box .ant-input-affix-wrapper {
+
+    background-color: #5e5d5d !important;
+    color: #cfcbcb;
+    outline: none;
+    border-style: none
+}
+
+.card-box .ant-checkbox-wrapper {
+    color: #cfcbcb;
+}
+
+.card-box input::placeholder {
+    color: #cfcbcb;
+}
+
+.text-title {
+    color: #fff;
+}
+
+.text-normal {
+    color: #cfcbcb;
+}
+.text-primary{
+    color:  #2c3ee7;
+}
+
+.login-form {
+    width: 100%;
+    /* Ensure form takes full width inside card-box */
+    max-width: 300px;
+    margin: auto;
+}
+
+.login-form-forgot {
+    float: right;
+}
+
+.login-form-button {
+    width: 100%;
+}
+
+/* Media query for smartphones */
+@media (max-width: 768px) {
+    .card-box {
+        padding: 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .login-form {
+        max-width: 100%;
+        /* Ensure form takes full width on smaller screens */
+    }
+}
+
